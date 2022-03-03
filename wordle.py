@@ -37,11 +37,10 @@ def check(guess, true):
 
 class wordle_solver():
     """
-    Class to provid the best guesses for Wordle
+    Class to provide the best guesses for Wordle
     """
     def __init__(self):
         self.valid_words = np.loadtxt('valid_guesses.txt', dtype='str')
-#         self.valid_words = np.loadtxt('wordles.txt', dtype='str')
         self.wordles = self.valid_words # a current list of possible wordles given guesses and outputs
         
     def update_possible_wordles(self, guess, output):
